@@ -15,6 +15,7 @@
 		71AF761F2B2D62D3008067B1 /* EmojiArtDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF761E2B2D62D3008067B1 /* EmojiArtDocument.swift */; };
 		71AF76212B2D6429008067B1 /* EmojiArtDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF76202B2D6429008067B1 /* EmojiArtDocumentView.swift */; };
 		71AF76232B2D65B4008067B1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF76222B2D65B4008067B1 /* Extensions.swift */; };
+		71AF76252B2D900D008067B1 /* Sturldata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF76242B2D900D008067B1 /* Sturldata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		71AF761E2B2D62D3008067B1 /* EmojiArtDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocument.swift; sourceTree = "<group>"; };
 		71AF76202B2D6429008067B1 /* EmojiArtDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocumentView.swift; sourceTree = "<group>"; };
 		71AF76222B2D65B4008067B1 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		71AF76242B2D900D008067B1 /* Sturldata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sturldata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				71AF761C2B2D61A6008067B1 /* EmojiArt.swift */,
 				71AF761E2B2D62D3008067B1 /* EmojiArtDocument.swift */,
 				71AF76202B2D6429008067B1 /* EmojiArtDocumentView.swift */,
+				71AF76242B2D900D008067B1 /* Sturldata.swift */,
 				71AF76222B2D65B4008067B1 /* Extensions.swift */,
 				71AF76122B2D6122008067B1 /* Assets.xcassets */,
 				71AF76142B2D6122008067B1 /* Preview Content */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71AF76252B2D900D008067B1 /* Sturldata.swift in Sources */,
 				71AF76212B2D6429008067B1 /* EmojiArtDocumentView.swift in Sources */,
 				71AF76232B2D65B4008067B1 /* Extensions.swift in Sources */,
 				71AF761D2B2D61A6008067B1 /* EmojiArt.swift in Sources */,
