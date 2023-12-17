@@ -90,7 +90,6 @@ struct EmojiArtDocumentView: View {
                     size: paletteEmojiSize / zoom
                 )
                 return true
-                
             default:
                 break
             }
