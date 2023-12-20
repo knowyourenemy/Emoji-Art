@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		716B67232B32A0C700B5CBEA /* PaletteEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716B67222B32A0C700B5CBEA /* PaletteEditor.swift */; };
 		71AF760F2B2D6121008067B1 /* Emoji_ArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF760E2B2D6121008067B1 /* Emoji_ArtApp.swift */; };
 		71AF76132B2D6122008067B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AF76122B2D6122008067B1 /* Assets.xcassets */; };
 		71AF76162B2D6122008067B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AF76152B2D6122008067B1 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		716B67222B32A0C700B5CBEA /* PaletteEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditor.swift; sourceTree = "<group>"; };
 		71AF760B2B2D6121008067B1 /* Emoji Art.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Emoji Art.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AF760E2B2D6121008067B1 /* Emoji_ArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji_ArtApp.swift; sourceTree = "<group>"; };
 		71AF76122B2D6122008067B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		71AF760D2B2D6121008067B1 /* Emoji Art */ = {
 			isa = PBXGroup;
 			children = (
+				716B67222B32A0C700B5CBEA /* PaletteEditor.swift */,
 				71AF760E2B2D6121008067B1 /* Emoji_ArtApp.swift */,
 				71AF761C2B2D61A6008067B1 /* EmojiArt.swift */,
 				71AF761E2B2D62D3008067B1 /* EmojiArtDocument.swift */,
@@ -160,6 +163,7 @@
 			files = (
 				71AF76252B2D900D008067B1 /* Sturldata.swift in Sources */,
 				71AF76292B2ECDFD008067B1 /* PaletteStore.swift in Sources */,
+				716B67232B32A0C700B5CBEA /* PaletteEditor.swift in Sources */,
 				71AF76212B2D6429008067B1 /* EmojiArtDocumentView.swift in Sources */,
 				71AF76232B2D65B4008067B1 /* Extensions.swift in Sources */,
 				71AF761D2B2D61A6008067B1 /* EmojiArt.swift in Sources */,
