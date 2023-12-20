@@ -2,8 +2,10 @@
 //  PaletteStore.swift
 //  Emoji Art
 //
-//  Created by Aaditya Patwari on 17/12/23.
+//  Created by CS193p Instructor on 5/10/23.
+//  Copyright (c) 2023 Stanford University
 //
+
 import SwiftUI
 
 extension UserDefaults {
@@ -15,25 +17,26 @@ extension UserDefaults {
             return []
         }
     }
-    
     func set(_ palettes: [Palette], forKey key: String) {
         let data = try? JSONEncoder().encode(palettes)
         set(data, forKey: key)
     }
 }
 
-class PaletteStore: ObservableObject {
+class PaletteStore: ObservableObject, Identifiable {
     let name: String
     
-    private var userDefaultKey: String { "PaletteStore:" + name }
+    var id: String { name }
     
-    var palettes: [Palette]{
+    private var userDefaultsKey: String { "PaletteStore:" + name }
+    
+    var palettes: [Palette] {
         get {
-            UserDefaults.standard.palettes(forKey: userDefaultKey)
+            UserDefaults.standard.palettes(forKey: userDefaultsKey)
         }
         set {
             if !newValue.isEmpty {
-                UserDefaults.standard.set(newValue, forKey: userDefaultKey)
+                UserDefaults.standard.set(newValue, forKey: userDefaultsKey)
                 objectWillChange.send()
             }
         }
@@ -43,12 +46,10 @@ class PaletteStore: ObservableObject {
         self.name = name
         if palettes.isEmpty {
             palettes = Palette.builtins
-            
             if palettes.isEmpty {
-                palettes = [Palette(name: "Warning", emojis: "🔥")]
+                palettes = [Palette(name: "Warning", emojis: "⚠️")]
             }
         }
-       
     }
     
     @Published private var _cursorIndex = 0
@@ -57,6 +58,7 @@ class PaletteStore: ObservableObject {
         get { boundsCheckedPaletteIndex(_cursorIndex) }
         set { _cursorIndex = boundsCheckedPaletteIndex(newValue) }
     }
+    
     
     private func boundsCheckedPaletteIndex(_ index: Int) -> Int {
         var index = index % palettes.count
@@ -103,5 +105,15 @@ class PaletteStore: ObservableObject {
     func append(name: String, emojis: String) {
         append(Palette(name: name, emojis: emojis))
     }
+}
 
+extension PaletteStore: Hashable {
+    static func == (lhs: PaletteStore, rhs: PaletteStore) -> Bool {
+        lhs.name == rhs.name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+    
 }
