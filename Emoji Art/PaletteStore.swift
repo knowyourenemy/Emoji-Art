@@ -33,7 +33,7 @@ class PaletteStore: ObservableObject {
         }
         set {
             if !newValue.isEmpty {
-                UserDefaults.standard.set(newValue, forKey: name)
+                UserDefaults.standard.set(newValue, forKey: userDefaultKey)
                 objectWillChange.send()
             }
         }
@@ -43,6 +43,7 @@ class PaletteStore: ObservableObject {
         self.name = name
         if palettes.isEmpty {
             palettes = Palette.builtins
+            
             if palettes.isEmpty {
                 palettes = [Palette(name: "Warning", emojis: "🔥")]
             }
